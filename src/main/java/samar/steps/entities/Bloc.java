@@ -17,6 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Bloc implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Id
     private long idBloc;
     private String nomBloc;
