@@ -15,7 +15,6 @@ public class EtudiantService implements IEtudiantService {
 
     @Override
     public Long addEtudiant(Etudiant etudiant) {
-
         return e.save(etudiant).getIdEtudiant();
     }
 
@@ -28,6 +27,15 @@ public class EtudiantService implements IEtudiantService {
     public void deleteById(long id) {
         e.deleteById(id);
     }
+
+    @Override
+    public Etudiant editEtudiant(Etudiant etudiant) {
+        return e.save(etudiant);
     }
+
+
+}
+
+
 
 

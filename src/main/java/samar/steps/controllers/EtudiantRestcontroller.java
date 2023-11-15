@@ -23,11 +23,14 @@ public class EtudiantRestcontroller {
 
     public Long addEtudiant(@RequestBody Etudiant e)
     {
-
             return Service.addEtudiant(e);
-        }
+    }
 
-
+    @DeleteMapping("/deleteEtudiant/{id}")
+    String DeleteEtudiantByID(@PathVariable("id") long id){
+        Service.deleteById(id);
+        return "student deleted";
+    }
 
     @GetMapping("/getEtudiants")
     public ResponseEntity<List<Etudiant>> getAllEtudiants(){
@@ -35,11 +38,13 @@ public class EtudiantRestcontroller {
         return new ResponseEntity<List<Etudiant>>(liste, HttpStatus.OK);
     }
 
-    @DeleteMapping("/deleteEtudiant")
-    public ResponseEntity<String> DeleteById(@RequestBody Long id){
-
-        return new ResponseEntity<String>("étudiant est bien supprimé", HttpStatus.OK);
+    @PutMapping("updateEtudiant")
+    Etudiant updateEtudiant(@RequestBody Etudiant e){
+        return  Service.editEtudiant(e);
     }
+
+
+
 
 
 }

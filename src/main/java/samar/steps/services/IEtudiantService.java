@@ -11,6 +11,7 @@ public interface IEtudiantService {
 
 
     void deleteById(long id);
+    Etudiant editEtudiant(Etudiant etudiant);
 
 
 }

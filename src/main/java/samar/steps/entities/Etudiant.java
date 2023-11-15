@@ -24,7 +24,7 @@ public class Etudiant implements Serializable {
 
     private String prenomEt;
 
-    private int cin ;
+    private String cin ;
 
     private String ecole ;
 
@@ -32,12 +32,6 @@ public class Etudiant implements Serializable {
     private LocalDate dateNaissance ;
 
    private String email;
-   private String mdp;
+   private String mdp;}
 
 
-
-
-
-
-
-}
