@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb2be159-26a1-4eeb-8432-3b37d95d242b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/controllers/EtudiantRestcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/controllers/EtudiantRestcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/entities/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/entities/Etudiant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/EtudiantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/EtudiantRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/EtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/EtudiantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/IEtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/IEtudiantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/controllers/EtudiantRestcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/controllers/EtudiantRestcontroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/entities/Etudiant$EtudiantBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/entities/Etudiant$EtudiantBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/entities/Etudiant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/entities/Etudiant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/services/EtudiantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/services/EtudiantService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/services/IEtudiantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/services/IEtudiantService.class" afterDir="false" />
-    </list>
+    <list default="true" id="cb2be159-26a1-4eeb-8432-3b37d95d242b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -208,7 +196,7 @@
       <workItem from="1700058999215" duration="33000" />
       <workItem from="1700059048890" duration="3547000" />
       <workItem from="1700062702825" duration="4736000" />
-      <workItem from="1700087222487" duration="1151000" />
+      <workItem from="1700087222487" duration="1518000" />
     </task>
     <servers />
   </component>
