@@ -7,11 +7,9 @@
     <list default="true" id="cb2be159-26a1-4eeb-8432-3b37d95d242b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/controllers/EtudiantRestcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/controllers/EtudiantRestcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/BlocRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/BlocRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/EtudiantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/EtudiantRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/EtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/EtudiantService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/IEtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/IEtudiantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/controllers/EtudiantRestcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/controllers/EtudiantRestcontroller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/repositories/EtudiantRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/repositories/EtudiantRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/services/EtudiantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/services/EtudiantService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/services/IEtudiantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/services/IEtudiantService.class" afterDir="false" />
@@ -50,7 +48,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -72,7 +70,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;samar&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/rebhi/Downloads/steps&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -93,6 +91,13 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="samar.steps" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+      </set>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.StepsApplication">
     <configuration name="StepsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -215,6 +220,8 @@
       <workItem from="1700092559036" duration="1329000" />
       <workItem from="1700094635781" duration="388000" />
       <workItem from="1700095070656" duration="716000" />
+      <workItem from="1700169568564" duration="364000" />
+      <workItem from="1700170219761" duration="3604000" />
     </task>
     <servers />
   </component>

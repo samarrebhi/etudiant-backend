@@ -35,17 +35,21 @@ public class EtudiantService implements IEtudiantService {
     @Override
     public void deleteAll() {e.deleteAll();}
 
-    @Override
-    public Etudiant findEtudiantByCin(long cin) {
-        return  e.findEtudiantByCin(cin);
-    }
 
     @Override
     public Etudiant editEtudiant(Etudiant etudiant) {
         return e.save(etudiant);
     }
 
+@Override
+    public List<Etudiant> findEtudiantsByEcole(String ecole){
+        return e.findEtudiantsByEcole(ecole);
+}
 
+    /*@Override
+    public List<Etudiant> findEtudiantByCin(Long cin) {
+        return e.findEtudiantByCin(cin);
+    }*/
 }
 
 

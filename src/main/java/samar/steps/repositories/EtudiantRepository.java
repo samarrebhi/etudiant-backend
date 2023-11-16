@@ -9,7 +9,9 @@ import samar.steps.entities.Etudiant;
 import java.util.List;
 
 public interface EtudiantRepository extends JpaRepository<Etudiant,Long> {
+    List<Etudiant> findEtudiantsByEcole(String ecole);
+
+    //List<Etudiant> findEtudiantByCin(Long cin);
 
 
-    Etudiant findEtudiantByCin(long cin);
 }

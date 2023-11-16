@@ -19,6 +19,7 @@ public interface IEtudiantService {
     Etudiant editEtudiant(Etudiant etudiant);
 
     void deleteAll();
-    Etudiant findEtudiantByCin(long cin);
+    List<Etudiant> findEtudiantsByEcole(String ecole);
 
+   // List<Etudiant> findEtudiantByCin(Long cin) ;
 }

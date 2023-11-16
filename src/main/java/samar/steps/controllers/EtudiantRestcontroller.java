@@ -42,6 +42,10 @@ public class EtudiantRestcontroller {
         Service.deleteAll();
         return "all students are deleted";
     }
+    @PutMapping("updateEtudiant")
+    Etudiant updateEtudiant(@RequestBody Etudiant e){
+        return  Service.editEtudiant(e);
+    }
     @GetMapping("/getEtudiants")
     public ResponseEntity<List<Etudiant>> getAllEtudiants(){
         List<Etudiant> liste=Service.getAllEtudiants();
@@ -50,13 +54,21 @@ public class EtudiantRestcontroller {
     @GetMapping("/getbyid/{id}")
     Etudiant findById(@PathVariable("id") Long id){ return Service.findById(id);}
 
-    /*@GetMapping("/getbycin/{cin}")
-    Etudiant findEtudiantBycin(@PathVariable("cin") Long cin){ return Service.findEtudiantByCin(cin);}
-*/
-    @PutMapping("updateEtudiant")
-    Etudiant updateEtudiant(@RequestBody Etudiant e){
-        return  Service.editEtudiant(e);
+    @GetMapping("/getbyecole")
+    public ResponseEntity<List<Etudiant>> findEtudiantsByEcole(@RequestParam("ecole") String ecole) {
+        List<Etudiant> etudiants = Service.findEtudiantsByEcole(ecole);
+        return ResponseEntity.ok(etudiants);
     }
+    /*@GetMapping("/getbycin")
+    public ResponseEntity<List<Etudiant>> findEtudiantBycin(@RequestParam("cin") Long cin){
+        List<Etudiant> liste=Service.findEtudiantByCin(cin);
+    return ResponseEntity.ok(liste);}*/
+
+
+
+
+
+
 
 
 
