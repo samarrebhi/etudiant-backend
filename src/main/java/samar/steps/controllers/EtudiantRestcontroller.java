@@ -25,19 +25,34 @@ public class EtudiantRestcontroller {
     {
             return Service.addEtudiant(e);
     }
+    @PostMapping("/addEtudiants")
+
+    public List<Etudiant> addEtudiants(@RequestBody List<Etudiant> liste)
+    {
+        return Service.addAllEtudiant(liste);
+    }
 
     @DeleteMapping("/deleteEtudiant/{id}")
     String DeleteEtudiantByID(@PathVariable("id") long id){
         Service.deleteById(id);
         return "student deleted";
     }
-
+    @DeleteMapping("/deleteall")
+    String DeleteAll(){
+        Service.deleteAll();
+        return "all students are deleted";
+    }
     @GetMapping("/getEtudiants")
     public ResponseEntity<List<Etudiant>> getAllEtudiants(){
         List<Etudiant> liste=Service.getAllEtudiants();
         return new ResponseEntity<List<Etudiant>>(liste, HttpStatus.OK);
     }
+    @GetMapping("/getbyid/{id}")
+    Etudiant findById(@PathVariable("id") Long id){ return Service.findById(id);}
 
+    /*@GetMapping("/getbycin/{cin}")
+    Etudiant findEtudiantBycin(@PathVariable("cin") Long cin){ return Service.findEtudiantByCin(cin);}
+*/
     @PutMapping("updateEtudiant")
     Etudiant updateEtudiant(@RequestBody Etudiant e){
         return  Service.editEtudiant(e);

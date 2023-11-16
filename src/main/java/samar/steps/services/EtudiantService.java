@@ -14,18 +14,30 @@ public class EtudiantService implements IEtudiantService {
     public EtudiantRepository e;
 
     @Override
-    public Long addEtudiant(Etudiant etudiant) {
-        return e.save(etudiant).getIdEtudiant();
+    public Long addEtudiant(Etudiant etudiant) {return e.save(etudiant).getIdEtudiant();
     }
-
+    @Override
+    public List<Etudiant> addAllEtudiant(List<Etudiant> liste) {
+        return e.saveAll(liste);
+    }
     @Override
     public List<Etudiant> getAllEtudiants() {
         return (List<Etudiant>) e.findAll();
     }
 
     @Override
+    public Etudiant findById(long id) {return e.findById(id).get();}
+
+    @Override
     public void deleteById(long id) {
         e.deleteById(id);
+    }
+    @Override
+    public void deleteAll() {e.deleteAll();}
+
+    @Override
+    public Etudiant findEtudiantByCin(long cin) {
+        return  e.findEtudiantByCin(cin);
     }
 
     @Override

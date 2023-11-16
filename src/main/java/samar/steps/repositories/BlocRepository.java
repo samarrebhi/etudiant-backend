@@ -3,6 +3,7 @@ package samar.steps.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import samar.steps.entities.Bloc;
+import samar.steps.entities.Etudiant;
 
 import java.util.List;
 
