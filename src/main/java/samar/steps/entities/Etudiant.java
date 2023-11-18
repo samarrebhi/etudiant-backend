@@ -6,6 +6,7 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -32,6 +33,12 @@ public class Etudiant implements Serializable {
     private LocalDate dateNaissance ;
 
    private String email;
-   private String mdp;}
+   private String mdp;
+
+   //association with table Reservation
+   /*@ManyToMany(mappedBy = "etudiant" , cascade =  CascadeType.ALL)
+   private Set<Reservation> reservation ;*/
+
+}
 
 

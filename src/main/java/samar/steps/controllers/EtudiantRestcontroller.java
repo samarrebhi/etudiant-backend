@@ -10,6 +10,8 @@ import samar.steps.entities.Etudiant;
 
 import samar.steps.services.EtudiantService;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -20,13 +22,8 @@ public class EtudiantRestcontroller {
     EtudiantService Service;
 
     @PostMapping("/addEtudiant")
-
-    public Long addEtudiant(@RequestBody Etudiant e)
-    {
-            return Service.addEtudiant(e);
-    }
+    public Long addEtudiant(@RequestBody Etudiant e) {return Service.addEtudiant(e);}
     @PostMapping("/addEtudiants")
-
     public List<Etudiant> addEtudiants(@RequestBody List<Etudiant> liste)
     {
         return Service.addAllEtudiant(liste);
@@ -37,10 +34,7 @@ public class EtudiantRestcontroller {
         Service.deleteById(id);
         return "student deleted";
     }
-    @DeleteMapping("/deleteall")
-    String DeleteAll(){
-        Service.deleteAll();
-        return "all students are deleted";
+    @DeleteMapping("/deleteall") String DeleteAll(){Service.deleteAll();return "all students are deleted";
     }
     @PutMapping("updateEtudiant")
     Etudiant updateEtudiant(@RequestBody Etudiant e){
@@ -51,13 +45,31 @@ public class EtudiantRestcontroller {
         List<Etudiant> liste=Service.getAllEtudiants();
         return new ResponseEntity<List<Etudiant>>(liste, HttpStatus.OK);
     }
-    @GetMapping("/getbyid/{id}")
-    Etudiant findById(@PathVariable("id") Long id){ return Service.findById(id);}
+    @GetMapping("/getbyid/{id}") Etudiant findById(@PathVariable("id") Long id){ return Service.findById(id);}
 
     @GetMapping("/getbyecole")
     public ResponseEntity<List<Etudiant>> findEtudiantsByEcole(@RequestParam("ecole") String ecole) {
         List<Etudiant> etudiants = Service.findEtudiantsByEcole(ecole);
         return ResponseEntity.ok(etudiants);
+    }
+   @GetMapping("/getbynomEtcontaining")
+    public ResponseEntity<List<Etudiant>> findEtudiantByNomEtContaining(@RequestParam("nomEt") String s)
+   {
+       List<Etudiant> l=Service.findEtudiantByNomEtContaining(s);
+       return ResponseEntity.ok(l);
+   }
+    @GetMapping("/getbyEmail")
+     public ResponseEntity<Etudiant> findEtudiantByEmail(@RequestParam("email") String em)
+    {
+    Etudiant etudiant=Service.findEtudiantByEmail(em);
+    return ResponseEntity.ok(etudiant);
+    }
+    @GetMapping("/getbydobafter")
+    public ResponseEntity<List<Etudiant>> findEtudiantByDateNaissanceAfter(@RequestParam("dateNaissance") LocalDate date
+    )
+    {
+        List<Etudiant> liste=Service.findEtudiantByDateNaissanceAfter(date);
+        return ResponseEntity.ok(liste);
     }
     /*@GetMapping("/getbycin")
     public ResponseEntity<List<Etudiant>> findEtudiantBycin(@RequestParam("cin") Long cin){

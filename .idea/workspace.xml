@@ -5,13 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb2be159-26a1-4eeb-8432-3b37d95d242b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/samar/steps/controllers/ReservationRestcontroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/samar/steps/entities/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/ReservationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/IReservationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/controllers/BlocRestcontroller.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/controllers/EtudiantRestcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/controllers/EtudiantRestcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/entities/Bloc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/entities/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/entities/Etudiant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/BlocRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/EtudiantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/EtudiantRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/BlocService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/EtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/EtudiantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/IBlocService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/IEtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/IEtudiantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/controllers/BlocRestcontroller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/controllers/EtudiantRestcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/controllers/EtudiantRestcontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/entities/Bloc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/entities/Etudiant$EtudiantBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/entities/Etudiant$EtudiantBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/entities/Etudiant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/entities/Etudiant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/repositories/BlocRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/repositories/EtudiantRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/repositories/EtudiantRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/services/BlocService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/services/EtudiantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/services/EtudiantService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/services/IBlocService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/services/IEtudiantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/services/IEtudiantService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +90,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;samar&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;samarr&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/rebhi/Downloads/steps&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -222,10 +242,29 @@
       <workItem from="1700095070656" duration="716000" />
       <workItem from="1700169568564" duration="364000" />
       <workItem from="1700170219761" duration="3604000" />
+      <workItem from="1700226058119" duration="4928000" />
+      <workItem from="1700232080821" duration="199000" />
+      <workItem from="1700232297664" duration="130000" />
+      <workItem from="1700232600709" duration="2685000" />
+      <workItem from="1700235368485" duration="280000" />
+      <workItem from="1700251351560" duration="635000" />
+      <workItem from="1700253714608" duration="1022000" />
+      <workItem from="1700296363891" duration="277000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

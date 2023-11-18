@@ -1,7 +1,10 @@
 package samar.steps.services;
 
+import org.springframework.cglib.core.Local;
 import samar.steps.entities.Etudiant;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,4 +25,8 @@ public interface IEtudiantService {
     List<Etudiant> findEtudiantsByEcole(String ecole);
 
    // List<Etudiant> findEtudiantByCin(Long cin) ;
+
+    List<Etudiant>findEtudiantByNomEtContaining(String s);
+    Etudiant findEtudiantByEmail(String em);
+    List<Etudiant> findEtudiantByDateNaissanceAfter(LocalDate date);
 }

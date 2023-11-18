@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import samar.steps.entities.Etudiant;
 import samar.steps.repositories.EtudiantRepository;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -46,6 +48,20 @@ public class EtudiantService implements IEtudiantService {
         return e.findEtudiantsByEcole(ecole);
 }
 
+    @Override
+    public List<Etudiant> findEtudiantByNomEtContaining(String s) {
+        return e.findEtudiantByNomEtContaining(s);
+    }
+
+    @Override
+    public Etudiant findEtudiantByEmail(String em) {
+        return e.findEtudiantByEmail(em);
+    }
+
+    @Override
+    public List<Etudiant> findEtudiantByDateNaissanceAfter(LocalDate date) {
+        return e.findEtudiantByDateNaissanceAfter(date);
+    }
     /*@Override
     public List<Etudiant> findEtudiantByCin(Long cin) {
         return e.findEtudiantByCin(cin);
