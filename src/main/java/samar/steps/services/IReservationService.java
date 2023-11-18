@@ -8,5 +8,5 @@ public interface IReservationService{
     Reservation addReservation (Reservation r );
     void delete(Reservation r);
 
-
+    Reservation findByIdReservation(String id);
 }

@@ -3,7 +3,9 @@ package samar.steps.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import samar.steps.entities.Etudiant;
+import samar.steps.entities.Reservation;
 import samar.steps.repositories.EtudiantRepository;
+import samar.steps.repositories.ReservationRepository;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -62,11 +64,68 @@ public class EtudiantService implements IEtudiantService {
     public List<Etudiant> findEtudiantByDateNaissanceAfter(LocalDate date) {
         return e.findEtudiantByDateNaissanceAfter(date);
     }
+
+
     /*@Override
     public List<Etudiant> findEtudiantByCin(Long cin) {
         return e.findEtudiantByCin(cin);
     }*/
-}
+
+    // ajouterEtudiantEtAffecterReservation
+    ReservationRepository reservationRepository;
+    @Override
+    public Etudiant ajouterEtudiantEtAssocierReservation(long id) {
+
+        //---------------------------------
+        LocalDate dateDebutAU;
+        LocalDate dateFinAU;
+        int year = LocalDate.now().getYear() % 100;
+        if (LocalDate.now().getMonthValue() <= 7) {
+            dateDebutAU = LocalDate.of(Integer.parseInt("20" + (year - 1)), 9, 15);
+            dateFinAU = LocalDate.of(Integer.parseInt("20" + year), 6, 30);
+        } else {
+            dateDebutAU = LocalDate.of(Integer.parseInt("20" + year), 9, 15);
+            dateFinAU = LocalDate.of(Integer.parseInt("20" + (year + 1)), 6, 30);
+        }
+        //---------------------------------;
+        // Find the student based on the provided id
+        Etudiant etudiant;
+        etudiant = e.findById(id).get();
+
+        // Return the student with the associated reservation
+        // Create a new student if not found
+        if (etudiant == null) {
+            etudiant = new Etudiant();
+
+
+            // Save the new student
+            e.save(etudiant);
+        }
+
+        // Create a new reservation
+        Reservation r = new Reservation();
+        // Set properties for the reservation, e.g., ID, dates, etc.
+        r.setIdReservation(dateDebutAU.getYear()+"/"+dateFinAU.getYear());
+        r.setAnneeReservation(new Date());
+        r.setEstValide(true); // Implement this method
+
+        // Associate the reservation with the student
+        etudiant.getReservations().add(r);
+
+        // Associate the student with the reservation (many-to-many)
+        r.getEtudiants().add(etudiant);
+
+        // Save the changes
+        e.save(etudiant);
+        reservationRepository.save(r);
+
+
+        return etudiant;
+    }
+
+    }
+
+
 
 
 

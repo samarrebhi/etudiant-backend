@@ -71,6 +71,11 @@ public class EtudiantRestcontroller {
         List<Etudiant> liste=Service.findEtudiantByDateNaissanceAfter(date);
         return ResponseEntity.ok(liste);
     }
+
+    @PostMapping("/addetudiantwithreservation")
+   Etudiant addEtudiantavecReservation(@RequestParam("idEtudiant") long id){
+        return Service.ajouterEtudiantEtAssocierReservation(id);
+    }
     /*@GetMapping("/getbycin")
     public ResponseEntity<List<Etudiant>> findEtudiantBycin(@RequestParam("cin") Long cin){
         List<Etudiant> liste=Service.findEtudiantByCin(cin);

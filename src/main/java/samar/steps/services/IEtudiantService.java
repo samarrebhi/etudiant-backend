@@ -28,5 +28,8 @@ public interface IEtudiantService {
 
     List<Etudiant>findEtudiantByNomEtContaining(String s);
     Etudiant findEtudiantByEmail(String em);
+
     List<Etudiant> findEtudiantByDateNaissanceAfter(LocalDate date);
+
+    Etudiant ajouterEtudiantEtAssocierReservation(long id);
 }

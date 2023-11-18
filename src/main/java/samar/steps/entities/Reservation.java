@@ -5,6 +5,7 @@ import lombok.*;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -19,12 +20,13 @@ public class Reservation {
    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private String idReservation;
 
-    private LocalDate anneeReservation ;
+    private Date anneeReservation ;
     private Boolean estValide ;
 
     //association with table Etudiant
-    /*@ManyToMany(cascade = CascadeType.ALL)
-    public Set<Etudiant> etudiant ;*/
+    @ManyToMany(cascade = CascadeType.ALL)
+    public Set<Etudiant> etudiants = new HashSet<>();
+
 }
 
 

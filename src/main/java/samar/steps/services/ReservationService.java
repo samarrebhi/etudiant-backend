@@ -17,4 +17,9 @@ public class ReservationService implements IReservationService{
     public void delete(Reservation r) {
 
     }
+
+    @Override
+    public Reservation findByIdReservation(String id) {
+        return r.findByIdReservation(id);
+    }
 }

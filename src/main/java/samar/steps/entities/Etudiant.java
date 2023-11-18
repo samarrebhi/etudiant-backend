@@ -7,6 +7,7 @@ import lombok.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -36,8 +37,9 @@ public class Etudiant implements Serializable {
    private String mdp;
 
    //association with table Reservation
-   /*@ManyToMany(mappedBy = "etudiant" , cascade =  CascadeType.ALL)
-   private Set<Reservation> reservation ;*/
+   @ManyToMany(mappedBy = "etudiants", cascade = CascadeType.ALL)
+   private Set<Reservation> reservations = new HashSet<>();
+
 
 }
 
