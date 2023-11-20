@@ -7,13 +7,9 @@
     <list default="true" id="cb2be159-26a1-4eeb-8432-3b37d95d242b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/controllers/EtudiantRestcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/controllers/EtudiantRestcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/entities/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/entities/Etudiant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/entities/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/repositories/ReservationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/EtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/EtudiantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/IEtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/IEtudiantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/IReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/IReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/samar/steps/services/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/samar/steps/services/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/controllers/EtudiantRestcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/controllers/EtudiantRestcontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/samar/steps/services/EtudiantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/samar/steps/services/EtudiantService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +228,8 @@
       <workItem from="1700253714608" duration="1022000" />
       <workItem from="1700296363891" duration="277000" />
       <workItem from="1700303141526" duration="274000" />
-      <workItem from="1700343112955" duration="4076000" />
+      <workItem from="1700343112955" duration="7926000" />
+      <workItem from="1700430204792" duration="5806000" />
     </task>
     <servers />
   </component>

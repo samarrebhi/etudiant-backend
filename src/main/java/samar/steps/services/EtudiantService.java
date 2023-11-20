@@ -96,16 +96,17 @@ public class EtudiantService implements IEtudiantService {
         // Create a new student if not found
         if (etudiant == null) {
             etudiant = new Etudiant();
-
-
-            // Save the new student
             e.save(etudiant);
+
+
+
         }
+
 
         // Create a new reservation
         Reservation r = new Reservation();
         // Set properties for the reservation, e.g., ID, dates, etc.
-        r.setIdReservation(dateDebutAU.getYear()+"/"+dateFinAU.getYear());
+        r.setIdReservation(dateDebutAU.getYear()+"/"+dateFinAU.getYear()+"/"+id);
         r.setAnneeReservation(new Date());
         r.setEstValide(true); // Implement this method
 

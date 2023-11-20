@@ -15,6 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/Etudiants")
 public class EtudiantRestcontroller {
 
@@ -40,6 +41,10 @@ public class EtudiantRestcontroller {
     Etudiant updateEtudiant(@RequestBody Etudiant e){
         return  Service.editEtudiant(e);
     }
+
+
+
+
     @GetMapping("/getEtudiants")
     public ResponseEntity<List<Etudiant>> getAllEtudiants(){
         List<Etudiant> liste=Service.getAllEtudiants();
