@@ -15,11 +15,11 @@ public interface IEtudiantService {
 
     List<Etudiant> getAllEtudiants();
 
-    Etudiant findById(long id);
+    Etudiant findById(Long id);
 
-    void deleteById(long id);
+    void deleteById(Long id);
 
-    Etudiant editEtudiant(Etudiant etudiant);
+    public Etudiant editEtudiant(Long id, Etudiant etudiant);
 
     void deleteAll();
     List<Etudiant> findEtudiantsByEcole(String ecole);
@@ -31,5 +31,5 @@ public interface IEtudiantService {
 
     List<Etudiant> findEtudiantByDateNaissanceAfter(LocalDate date);
 
-    Etudiant ajouterEtudiantEtAssocierReservation(long id);
+    //Etudiant ajouterEtudiantEtAssocierReservation(Long id);
 }

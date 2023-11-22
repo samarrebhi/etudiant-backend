@@ -24,8 +24,8 @@ public class Reservation {
     private Boolean estValide ;
 
     //association with table Etudiant
-    @ManyToMany(cascade = CascadeType.ALL)
-    public Set<Etudiant> etudiants = new HashSet<>();
+    /*@ManyToMany(cascade = CascadeType.ALL)
+    public Set<Etudiant> etudiants = new HashSet<>();*/
 
 }
 

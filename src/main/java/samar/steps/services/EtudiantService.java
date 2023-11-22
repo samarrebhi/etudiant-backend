@@ -3,12 +3,9 @@ package samar.steps.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import samar.steps.entities.Etudiant;
-import samar.steps.entities.Reservation;
 import samar.steps.repositories.EtudiantRepository;
-import samar.steps.repositories.ReservationRepository;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -30,10 +27,10 @@ public class EtudiantService implements IEtudiantService {
     }
 
     @Override
-    public Etudiant findById(long id) {return e.findById(id).get();}
+    public Etudiant findById(Long id) {return e.findById(id).get();}
 
     @Override
-    public void deleteById(long id) {
+    public void deleteById(Long id) {
         e.deleteById(id);
     }
     @Override
@@ -41,9 +38,21 @@ public class EtudiantService implements IEtudiantService {
 
 
     @Override
-    public Etudiant editEtudiant(Etudiant etudiant) {
-        return e.save(etudiant);
+    public Etudiant editEtudiant(Long id, Etudiant etudiant) {
+        if (e.findById(id).isPresent()) {
+           Etudiant etudiant1 = e.findById(id).get();
+            etudiant1.setNomEt(etudiant.getNomEt());
+            etudiant1.setPrenomEt(etudiant.getPrenomEt());
+            etudiant1.setCin(etudiant.getCin());
+            etudiant1.setEmail(etudiant.getEmail());
+            etudiant1.setEcole(etudiant.getEcole());
+            etudiant1.setDateNaissance(etudiant.getDateNaissance());
+            etudiant1.setMdp(etudiant.getMdp());
+            return e.save(etudiant1);
+        }
+        return null;
     }
+
 
 @Override
     public List<Etudiant> findEtudiantsByEcole(String ecole){
@@ -72,57 +81,7 @@ public class EtudiantService implements IEtudiantService {
     }*/
 
     // ajouterEtudiantEtAffecterReservation
-    ReservationRepository reservationRepository;
-    @Override
-    public Etudiant ajouterEtudiantEtAssocierReservation(long id) {
 
-        //---------------------------------
-        LocalDate dateDebutAU;
-        LocalDate dateFinAU;
-        int year = LocalDate.now().getYear() % 100;
-        if (LocalDate.now().getMonthValue() <= 7) {
-            dateDebutAU = LocalDate.of(Integer.parseInt("20" + (year - 1)), 9, 15);
-            dateFinAU = LocalDate.of(Integer.parseInt("20" + year), 6, 30);
-        } else {
-            dateDebutAU = LocalDate.of(Integer.parseInt("20" + year), 9, 15);
-            dateFinAU = LocalDate.of(Integer.parseInt("20" + (year + 1)), 6, 30);
-        }
-        //---------------------------------;
-        // Find the student based on the provided id
-        Etudiant etudiant;
-        etudiant = e.findById(id).get();
-
-        // Return the student with the associated reservation
-        // Create a new student if not found
-        if (etudiant == null) {
-            etudiant = new Etudiant();
-            e.save(etudiant);
-
-
-
-        }
-
-
-        // Create a new reservation
-        Reservation r = new Reservation();
-        // Set properties for the reservation, e.g., ID, dates, etc.
-        r.setIdReservation(dateDebutAU.getYear()+"/"+dateFinAU.getYear()+"/"+id);
-        r.setAnneeReservation(new Date());
-        r.setEstValide(true); // Implement this method
-
-        // Associate the reservation with the student
-        etudiant.getReservations().add(r);
-
-        // Associate the student with the reservation (many-to-many)
-        r.getEtudiants().add(etudiant);
-
-        // Save the changes
-        e.save(etudiant);
-        reservationRepository.save(r);
-
-
-        return etudiant;
-    }
 
     }
 

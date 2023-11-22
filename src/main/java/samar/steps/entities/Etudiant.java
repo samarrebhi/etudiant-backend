@@ -20,7 +20,7 @@ import java.util.Set;
 public class Etudiant implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idEtudiant ;
+    private Long idEtudiant ;
 
     private String nomEt ;
 
@@ -37,8 +37,8 @@ public class Etudiant implements Serializable {
    private String mdp;
 
    //association with table Reservation
-   @ManyToMany(mappedBy = "etudiants", cascade = CascadeType.ALL)
-   private Set<Reservation> reservations = new HashSet<>();
+  /* @ManyToMany(mappedBy = "etudiants", cascade = CascadeType.ALL)
+   private Set<Reservation> reservations = new HashSet<>();*/
 
 
 }
