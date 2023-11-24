@@ -30,10 +30,9 @@ public class EtudiantRestcontroller {
         return Service.addAllEtudiant(liste);
     }
 
-    @DeleteMapping("/deleteEtudiant/{id}")
-    String DeleteEtudiantByID(@PathVariable("id") Long id){
-        Service.deleteById(id);
-        return "student deleted";
+    @DeleteMapping("/deletebyid/{id}")
+    void DeleteEtudiantByID(@PathVariable("id") Long id){
+         Service.deleteById(id);
     }
     @DeleteMapping("/deleteall") String DeleteAll(){Service.deleteAll();return "all students are deleted";
     }
