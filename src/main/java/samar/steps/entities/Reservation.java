@@ -1,15 +1,16 @@
 package samar.steps.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
+
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name="Reservation")
+@Table(name="reservation")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -24,8 +25,9 @@ public class Reservation {
     private Boolean estValide ;
 
     //association with table Etudiant
-    /*@ManyToMany(cascade = CascadeType.ALL)
-    public Set<Etudiant> etudiants = new HashSet<>();*/
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Etudiant> etudiants = new HashSet<>();
 
 }
 

@@ -74,14 +74,18 @@ public class EtudiantRestcontroller {
         return ResponseEntity.ok(liste);
     }
 
-   /* @PostMapping("/addetudiantwithreservation")
-   Etudiant addEtudiantavecReservation(@RequestParam("idEtudiant") Long id){
-        return Service.ajouterEtudiantEtAssocierReservation(id);
-    }*/
-    /*@GetMapping("/getbycin")
-    public ResponseEntity<List<Etudiant>> findEtudiantBycin(@RequestParam("cin") Long cin){
-        List<Etudiant> liste=Service.findEtudiantByCin(cin);
-    return ResponseEntity.ok(liste);}*/
+
+    @GetMapping("/getbycin")
+    public ResponseEntity<Etudiant> findEtudiantBycin(@RequestParam("cin") Long cin){
+        Etudiant l=Service.findEtudiantByCin(cin);
+    return ResponseEntity.ok(l);}
+
+
+    @PostMapping("/addetudiantwithreservation/{idreserv}")
+   Etudiant  ajouterEtudiantEtAssignerReservation(@PathVariable("idreserv") String idreserv,@RequestBody Etudiant et){
+        return Service.ajouterEtudiantEtAssignerReservation(idreserv,et );
+    }
+
 
 
 

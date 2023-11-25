@@ -1,6 +1,7 @@
 package samar.steps.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,7 +27,7 @@ public class Etudiant implements Serializable {
 
     private String prenomEt;
 
-    private String cin ;
+    private Long cin ;
 
     private String ecole ;
 
@@ -37,8 +38,9 @@ public class Etudiant implements Serializable {
    private String mdp;
 
    //association with table Reservation
-  /* @ManyToMany(mappedBy = "etudiants", cascade = CascadeType.ALL)
-   private Set<Reservation> reservations = new HashSet<>();*/
+   @ManyToMany(mappedBy = "etudiants", cascade = CascadeType.ALL)
+   @JsonIgnore
+   private Set<Reservation> reservations = new HashSet<>();
 
 
 }

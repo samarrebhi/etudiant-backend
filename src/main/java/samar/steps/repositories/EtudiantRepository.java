@@ -9,11 +9,9 @@ import java.util.List;
 
 public interface EtudiantRepository extends JpaRepository<Etudiant,Long> {
     List<Etudiant> findEtudiantsByEcole(String ecole);
-
-    //List<Etudiant> findEtudiantByCin(Long cin);
+    Etudiant findEtudiantByCin(Long cin);
     List<Etudiant> findEtudiantByNomEtContaining(String s);
     Etudiant findEtudiantByEmail(String em);
-
-
     List<Etudiant> findEtudiantByDateNaissanceAfter(LocalDate date);
+
 }
